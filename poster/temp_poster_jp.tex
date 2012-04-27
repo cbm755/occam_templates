@@ -1,0 +1,156 @@
+% Poster for the APS April meeting 2012
+% JTP 13/03/2012
+
+% Produced using a hacked version of the OCCAM "style" file, occamify.tex.
+% Figure produced using matlibplot in python.  Produced by the scripts 
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/growth_rate_hypercollisions_sans.py
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/hs_a-system_k2_sans.py
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/hs_a-system_k6_sans.py
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/theoretical_spectra_thin_k2.py
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/theoretical_spectra_thin_k6.py
+% /home/joseph/Dropbox/work/dphil/coding/pueschel_dannert_jenko/python/van_kampen_poster.py
+% with sans options and fontsize 28, except in legends and ticklabels where fontsize is 24. 
+
+\documentclass[a0]{a0poster}
+
+\include{temp_occamify_jp}
+\usepackage[font={small,sf}]{caption}
+%\usepackage[EM]{jpnotation} % JTP
+%\usepackage{JournalNames} % JTP
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage[thicklines]{cancel}
+\usepackage{amsmath,amssymb}
+\usepackage{wrapfig}
+\usepackage{multimedia}
+\usepackage{pstricks,url,overpic,pst-plot,pst-node}
+\newsavebox{\IBox}
+\newlength{\ILength}
+\newsavebox{\Imagebox}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{parcolumns}
+
+\newcommand{\M}{M}
+\newcommand{\T}{T}
+\renewcommand{\CancelColor}{\red}
+\newcommand{\purple}{\color{purple}}
+
+\renewcommand{\d}{\textrm{d}}
+
+\graphicspath{{../coding/pueschel_dannert_jenko/python/}}
+
+% Use:
+% 
+% (1) Environments area1,...,area4 for boxes in columns 1,...,4.
+% (2) \framethick, \framethin, \frameoff for boxes with thick/thin/no frames.
+% (3) \Head, \Subhead for headings and subheadings in boxes.
+% 
+% This loads packages: graphicx, color, amsmath, amssymb, amsfonts, textpos, url.
+% Defines colours: occamdark, occammedium, occamlight, desert
+%
+% Size options provided by 'a0poster':
+%
+% \tiny         12.   pt     \LARGE        43.   pt
+% \footnotesize 17.28 pt     \huge         51.6  pt
+% \small        20.74 pt     \Huge         61.92 pt
+% \normalsize   24.88 pt     \veryHuge     74.3  pt
+% \large        29.86 pt     \VeryHuge     89.16 pt
+% \Large        35.83 pt     \VERYHuge    107.   pt
+
+
+\usepackage{times} % Uncomment to change fonts
+
+
+\usepackage{scalefnt}
+
+\newcommand{\scalefactor}{1.1}
+\let\Oldsmall\small\renewcommand{\small}{\Oldsmall\scalefont{\scalefactor}}
+\let\Oldnormalsize\normalsize\renewcommand{\normalsize}{\Oldnormalsize\scalefont{\scalefactor}}
+\let\Oldlarge\large\renewcommand{\large}{\Oldlarge\scalefont{\scalefactor}}
+\let\OldLarge\Large\renewcommand{\Large}{\OldLarge\scalefont{\scalefactor}}
+\let\OldLARGE\LARGE\renewcommand{\LARGE}{\OldLARGE\scalefont{1}}%\scalefactor}}
+\let\Oldhuge\huge\renewcommand{\huge}{\Oldhuge\scalefont{\scalefactor}}
+\let\OldveryHuge\veryHuge\renewcommand{\veryHuge}{\OldveryHuge\scalefont{\scalefactor}}
+
+\begin{document}
+
+\background
+{
+% Logos and title
+%
+\logos
+
+\fontfamily{ppl}\selectfont
+
+\begin{textblock}{17}(7,0)
+
+\vspace{-2.8cm}
+\Title{Accurate representation of velocity space using truncated Hermite expansions}
+\end{textblock}
+
+% Author, affiliation & acknowledgement
+%
+
+\begin{textblock}{14}(8.5,1)
+\begin{center}
+\vspace{-1.4cm}
+{\bfseries\Large \underline{Joseph T. Parker}, Paul J. Dellar} %, A. A. Schekochihin, S. C. Cowley}
+
+Oxford Centre for Collaborative Applied Mathematics (OCCAM)
+
+\url{http://www.maths.ox.ac.uk/occam}
+
+\smallskip
+
+This poster is based on work supported by Award No. KUK-C1-013-04 made by\\
+King Abdullah University of Science and Technology (KAUST), and by EPSRC grant EP/E054625/1
+\end{center}
+\vspace{-0.2cm}
+\end{textblock}
+}
+
+% ---------------------------------------------------------------------- %
+
+\sffamily
+
+%%%%%   Column 1   %%%%%
+
+\framethick
+\begin{area1w}{.8}
+
+\vspace{-10mm}
+\Head{Summary}
+\vspace{-10mm}
+{\large
+We use a truncated Hermite expansion in velocity space and an iterated Fokker--Planck collision operator to study a 1+1 dimensional model for instabilities driven by ion density and temperature gradients. 
+The collision operator selectively damps the highest terms in the Hermite expansion, analogous to the hyperviscous dissipation used in Fourier spectral simulations of Navier--Stokes turbulence. 
+Our approach accurately captures the full range of growing and decaying modes with only a few tens of Hermite coefficients in velocity space, and is insensitive to parameter values in the collision operator. %Without hypercollisions, hundreds of Hermite coefficients are required to capture the growing modes. Decaying modes (due to Landau damping in the original kinetic equation) are completely absent without some form of collisionality, or other source of dissipation. We also derive an partial differential equation for the flow of relative entropy in Hermite space. Solutions of this equation are in excellent agreeement with computed Hermite spectra. The approach developed here extends to more general kinetic equations, and should improve the accuracy of large-scale gyrokinetic simulations, for which only modest numbers of degrees of freedom in velocity space are computationally feasible.
+}
+\end{area1w}
+
+\TPMargin{10pt}
+
+\framethin
+\begin{area1}{3.8}
+\Head{Ion temperature gradient instabilities}
+%\vspace{-10mm}
+  Idealized problem, simplified gyrokinetic equations  from \cite{PDJ,Belli05}
+%\vspace{-3mm}
+
+\end{area1}
+
+
+
+
+\frameoff
+\begin{textblock}{15.5}(15.75,11.1)
+\small{\bibliographystyle{jfmbracket2}
+\renewcommand{\refname}{}
+
+\vspace{-3.8cm}
+{\fontfamily{ppl}\selectfont\sffamily 
+\bibliography{DPhil}
+}
+}
+\end{textblock}
+\end{document}
