@@ -1,0 +1,23 @@
+# backup files, other temp files
+*~
+*.swp
+
+# latex junk
+*.aux
+*.log
+*.toc
+*.out
+*.snm
+*.nav
+
+# compiling object files
+*.o
+
+# python compiled files
+*.pyc
+
+# Can ignore specific files
+#.dropbox
+
+# Can also ignore all directories and files in a directory.
+#tmp/**/* 
