@@ -1,0 +1,152 @@
+\documentclass[a0]{a0poster}
+
+\include{occamify}
+
+% Use:
+% 
+% (1) Environments area1,...,area4 for boxes in columns 1,...,4.
+% (2) \framethick, \framethin, \frameoff for boxes with thick/thin/no frames.
+% (3) \Head, \Subhead for headings and subheadings in boxes.
+% 
+% This loads packages: graphicx, color, amsmath, amssymb, amsfonts, textpos, url.
+% Defines colours: occamdark, occammedium, occamlight, desert
+%
+% Size options provided by 'a0poster':
+%
+% \tiny         12.   pt     \LARGE        43.   pt
+% \footnotesize 17.28 pt     \huge         51.6  pt
+% \small        20.74 pt     \Huge         61.92 pt
+% \normalsize   24.88 pt     \veryHuge     74.3  pt
+% \large        29.86 pt     \VeryHuge     89.16 pt
+% \Large        35.83 pt     \VERYHuge    107.   pt
+
+%\usepackage{times} % Uncomment to change fonts
+
+\begin{document}
+
+{
+% Logos and title
+%
+\logos
+
+\fontfamily{ppl}\selectfont
+\begin{textblock}{20}(7,-0.1)
+\Title{The Oxford Centre for Collaborative Applied Mathematics}
+\end{textblock}
+
+% Author, affiliation & acknowledgement
+%
+
+\begin{textblock}{16}(9,0.7)
+\begin{center}
+{\bfseries\Large Author}
+
+Oxford Centre for Collaborative Applied Mathematics (OCCAM)
+
+\url{http://www.maths.ox.ac.uk/occam}
+
+\smallskip
+
+This poster is based on work supported by Award No. KUK-C1-013-04 made by\\
+King Abdullah University of Science and Technology (KAUST).
+\end{center}
+\end{textblock}
+}
+
+% ---------------------------------------------------------------------- %
+
+\sffamily
+
+%%%%%   Column 1   %%%%%
+
+\framethick
+\begin{area1w}{1}
+\Head{The problem}
+
+\ccc
+
+\ccc
+
+\ccc
+
+\end{area1w}
+
+\TPMargin{20pt}
+
+\frameoff
+\begin{area1}{5.6}
+\Head{Model formulation}
+
+\ccc
+
+\Subhead{Subheading}
+
+\ccc
+ 
+\end{area1}
+
+%%%%%   Column 2   %%%%%
+
+\begin{area2}{2.3}
+\Head{Some analysis}
+
+\ccc
+
+\end{area2}
+
+\framethin
+\begin{area2}{3.6}
+\Head{Some computer bits and bobs}
+
+\ccc
+
+\end{area2}
+
+\begin{area2}{6.5}
+\vspace{-5mm}
+
+\ccc
+
+\end{area2}
+
+\begin{area2}{9.35}
+\vspace{-5mm}
+
+\ccc
+
+\end{area2}
+
+%%%%%   Column 3   %%%%%
+
+\frameoff
+
+\begin{area3}{2.3}
+\Head{Nice pictures of results}
+
+\ccc
+
+\end{area3}
+
+%%%%%   Column 4   %%%%%
+
+\begin{area4}{1}
+\Head{Conclusions}
+\bigskip
+
+\ccc
+
+\end{area4}
+
+%%% Bibliography
+
+\begin{area4}{8}
+\Head{Collaborations}
+
+\bigskip
+\end{area4}
+
+\background
+
+\end{document}
+%
+% ---------------------------------------------------------------------- %

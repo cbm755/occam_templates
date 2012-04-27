@@ -1,0 +1,75 @@
+% For OCCAM
+% To be used for a0poster
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage[absolute]{textpos}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% OCCAM colours definition
+%
+\definecolor{occamdark}  {rgb}{0.333,0.278,0.169}
+\definecolor{occammedium}{rgb}{0.616,0.569,0.400}
+\definecolor{occamlight} {rgb}{0.890,0.863,0.596}
+\definecolor{desert}     {rgb}{0.968,0.956,0.850} %HTML: f7f4d9
+
+% Set sizes and colours for textboxes (package: textpos)
+%
+\TPMargin{40pt}
+\def\framethick{\TPshowboxestrue\setlength\TPboxrulesize{10pt}}
+\def\framethin{\TPshowboxestrue\setlength\TPboxrulesize{4pt}}
+\def\frameoff{\TPshowboxesfalse}
+
+\textblockcolour{desert}
+\textblockrulecolour{occammedium}
+
+\let\Textsize\normalsize
+\def\Title  #1{{\veryHuge\color{occamdark} \begin{center} #1 \end{center}}}
+%\def\Title  #1{{\VERYHuge\color{occamdark} #1 }}
+\def\Head   #1{\begin{center}\LARGE\color{occamdark}   \textbf{#1}\end{center}\medskip}
+\def\Subhead#1{\begin{center}\large\color{occamdark} #1\end{center}\medskip}
+
+\parindent=0pt
+\parskip=0.5\baselineskip
+
+% Columns: 4 cols of width 7 plus 3 gaps of width 1 (31=4*7+3*1)
+%
+\TPGrid[40mm,20mm]{31}{12} 
+
+\newenvironment{area1w}[1]{\textblockcolour{white}\begin{textblock}{8}(-0.5,#1)}{\end{textblock}}
+\newenvironment{area1}[1]{\begin{textblock}{7}( 0,#1)}{\end{textblock}}
+\newenvironment{area2}[1]{\begin{textblock}{7}( 8,#1)}{\end{textblock}}
+\newenvironment{area3}[1]{\begin{textblock}{7}(16,#1)}{\end{textblock}}
+\newenvironment{area4}[1]{\begin{textblock}{7}(24,#1)}{\end{textblock}}
+
+% New commands (Put your 'newcommand's here)
+%
+\newcommand{\ccc}{\dotfill\\\\}
+
+
+% Logos
+
+\newcommand{\logos}{
+\begin{textblock}{0}(-1.2,-0.3)
+\includegraphics[width=270mm]{img/logo-occam}
+\end{textblock}
+\begin{textblock}{0}(30,-0.3)
+\includegraphics[height=50mm]{img/logo-quad-oxford}
+\end{textblock}
+}
+
+%
+% Hack to have a coloured background
+%
+
+\newcommand{\background}{
+\framethick
+\begin{textblock}{33.26}(-1.13,-0.3)
+\vspace{1.026\textheight}
+
+\
+\end{textblock}
+}
