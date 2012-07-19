@@ -14,6 +14,9 @@
   \usetheme{Boadilla}
 }
 
+\usepackage{pgf}
+
+
 %%% OCCAM colours
 \definecolor{occamdark}  {rgb}{0.333,0.278,0.169}
 \definecolor{occammedium}{rgb}{0.616,0.569,0.400}
@@ -32,7 +35,8 @@
 \setbeamertemplate{navigation symbols}{}
 
 %% Add a small logo to each page
-\logo{\includegraphics{img/logo-occam-combined-small}}
+%\logo{\includegraphics{img/logo-occam-combined-small}} % bottom-right
+\logo{\pgfputat{\pgfxy(-1.25,8.175)}{\pgfbox[center,base]{\includegraphics{img/logo-occam-combined-small}}}} % top-right
 
 %% Completely remove the bottom bar
 %\setbeamertemplate{footline}{}
