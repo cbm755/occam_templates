@@ -9,6 +9,8 @@
 *.out
 *.snm
 *.nav
+*.dvi
+*.ps
 
 # compiling object files
 *.o

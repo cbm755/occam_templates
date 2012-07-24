@@ -14,7 +14,16 @@
   \usetheme{Boadilla}
 }
 
-\usepackage{pgf}
+% this moves the logo to the top-right [Nick Hale, Colin Macdonald 2012-07-24]
+\defbeamertemplate*{sidebar right}{upperlogo}
+{
+  \vskip6pt%
+  \llap{\insertlogo\hskip0.08cm}%
+  \vfill%
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+  \vskip1pt%
+}
+
 
 
 %%% OCCAM colours
@@ -35,8 +44,7 @@
 \setbeamertemplate{navigation symbols}{}
 
 %% Add a small logo to each page
-%\logo{\includegraphics{img/logo-occam-combined-small}} % bottom-right
-\logo{\pgfputat{\pgfxy(-1.25,8.175)}{\pgfbox[center,base]{\includegraphics{img/logo-occam-combined-small}}}} % top-right
+\logo{\includegraphics[width=0.26\textwidth]{img/logo-occam-combined-small}} % bottom-right
 
 %% Completely remove the bottom bar
 %\setbeamertemplate{footline}{}
