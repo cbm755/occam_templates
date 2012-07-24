@@ -1,7 +1,13 @@
 A template for making OCCAM posters and presentations
 =====================================================
 
-todo: where to get this, how to use it, etc
+OCCAM poster and presentation templates are maintained on GitHub.
+
+The preferred way of accessing them is with git by opening a terminal and typing:
+
+  git clone https://github.com/cbm755/occam_templates.git
+
+Later you can type "git pull" to download the latest changes.
 
 Notes
 =====
